@@ -1,8 +1,16 @@
+//main module
 module BlackJack (
-
+    input clk,
+    input rst,
+    input [3:0]first_card,second_card,third_card,fourth_card,  
+    output win, //LED
+    output lose, //LED
+    ouput [7:0] seg_out,
+    output reg [7:0] seg_sel
 );
+    //random number
     wire [3:0]random_num;
-    random_num=$urandom_range(20,30);
+    random_num=$urandom_range(1,9);
     
 endmodule
 
@@ -26,23 +34,7 @@ module Random_Num (
     end
 endmodule
 
-//DFF
-module DFF (
-    input clk,
-    input rst,
-    input d,
-    output reg q
-);
-     always @(negedge clk or negedge rst)
-        begin
-            if(rst == 0) begin
-                q<=0; 
-            end 
-            else begin
-                q<=d; 
-            end
-        end
-endmodule
+
 
 
 
