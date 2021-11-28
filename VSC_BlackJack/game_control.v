@@ -1,7 +1,7 @@
 module game_control (
     input clk,
     input rst,
-    input [3:0] first_card,second_card,third_card,fourth_card,
+    input [3:0] first_card,second_card,third_card,fourth_card,   //1~9 숫자 받음
     output reg [1:0] nstate,
     output reg [1:0] cstate,
     output reg win_pulse,
