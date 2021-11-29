@@ -3,7 +3,7 @@ module random_num_gen (
     input clk,
     input rst,
     //input card,
-    output reg [3:0]random_num
+    output reg [3:0]random
 );
     always @(posedge clk or negedge rst) begin
         if(!rst)
